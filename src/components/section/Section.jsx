@@ -4,7 +4,7 @@ import loginImg from '../../assets/login.svg';
 
 const Section = () => {
   return (
-    <div>
+    <div className="section">
         <section className="container hero">
             <div className="hero-text">
                 <h2>MERN Stack Authentication System</h2>
