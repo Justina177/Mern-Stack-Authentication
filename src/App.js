@@ -2,8 +2,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Layout from './components/layout/Layout'
+import Login from './pages/auth/Login';
 import Home from './pages/home/Home';
-import Auth from './pages/auth/Auth';
+// import Auth from './pages/auth/Auth';
 function App() {
   return (
    <>
@@ -14,7 +15,7 @@ function App() {
         <Home />
      </Layout> 
     } /> 
-     <Route path="/auth" element={<Auth />} /> 
+     <Route path="/login" element={<Login />} /> 
    </Routes>
    </BrowserRouter>
    </>
