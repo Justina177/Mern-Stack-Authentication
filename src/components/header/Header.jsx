@@ -1,19 +1,24 @@
 import React from 'react';
-// import './Header.scss';
-// import {BiLogin} from 'react-icons/bi';
+import './Header.scss';
+import {BiLogIn} from 'react-icons/bi';
 import {FaUserCircle} from 'react-icons/fa'
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+
 
 
 const activeLink = ({isActive}) => (isActive ? "active" : "");
+
 const Header = () => {
-    const activeLink = []
+    const navigate = useNavigate();
+    const goHome = () => {
+        navigate("/");
+    }
+  
   return (
     <header className="header">
         <nav>
-            <div className="logo">
-                {/* <BiLogin /> */}
+            <div className="logo" onClick={goHome}>
+                <BiLogIn size={35} />
                 <span>AUTH:J</span>               
             </div>
 
@@ -23,7 +28,7 @@ const Header = () => {
                     <p className="--color-white">Hi, JTina |</p>
                 </li>
                 <li>
-                    <button className="--btn --btn--primary">
+                    <button className="--btn --btn-primary">
                         <Link to="/login">Login</Link>
                     </button>
                 </li>
@@ -31,8 +36,7 @@ const Header = () => {
                     <NavLink to="/profile" className={activeLink}>Profile</NavLink>
                 </li>
                 <li>
-                    <button className="--btn --btn--secondary">
-                    </button>
+                    <button className="--btn --btn-secondary">Logout</button>
                 </li>
             </ul>
         </nav>
