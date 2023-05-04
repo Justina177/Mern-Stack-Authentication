@@ -3,6 +3,7 @@ import { BiLogIn } from 'react-icons/bi';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Card from '../../components/card/Card';
+import PasswordInput from '../../components/passwordInput/PasswordInput';
 import styles from "./auth.module.scss"
 
 const Login = () => {
@@ -38,14 +39,19 @@ const Login = () => {
               onChange={handleInputChange}
               />
 
-            <input
+            <PasswordInput />
+
+        {/* replace the Password input field with the passwordInput component with the hide and show password functionality  */}
+            {/* <input
               type="password"
               placeholder="Password"
               required
               name="password"
               value={""}
               onChange={handleInputChange}
-            /> 
+            />  */}
+
+            
 
             <button type="submit" className="--btn --btn-primary --btn-block">
               Login
