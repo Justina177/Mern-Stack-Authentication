@@ -39,7 +39,12 @@ const Login = () => {
               onChange={handleInputChange}
               />
 
-            <PasswordInput />
+            <PasswordInput 
+            placeholder="Password"
+            name="password"
+            value={password}
+            onChange={handleInputChange}
+            />
 
         {/* replace the Password input field with the passwordInput component with the hide and show password functionality  */}
             {/* <input
