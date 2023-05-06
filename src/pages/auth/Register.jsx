@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TiUserAddOutline } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 import Card from '../../components/card/Card';
@@ -21,7 +21,7 @@ const Register = () => {
 
     const [uCase, setUCase] = useState(false)
     const [num, setNum] = useState(false)
-    const [sChar, setsChar] = useState(false)
+    const [sChar, setSChar] = useState(false)
     const [passLength, setPassLength] = useState(false)
 
     const timesIcon = <FaTimes color="red" size={15} />;
@@ -34,13 +34,40 @@ const Register = () => {
       return timesIcon;
     };
 
-    
 
     const handleInputChange = (e) => {
       const {name, value} = e.target;
       setFormData({ ...formData, [name]: value })
     };
+    
+    useEffect(() => {
+      // Check Lower and Uppercase
+    if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+      setUCase(true);
+    } else {
+      setUCase(false);
+    }
+    // Check For Numbers
+    if (password.match(/([0-9])/)) {
+      setNum(true);
+    } else {
+      setNum(false);
+    }
+    // Check For Special char
+    if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
+      setSChar(true);
+    } else {
+      setSChar(false);
+    }
+    // Check if password up to 6
+    if (password.length > 5) {
+      setPassLength(true);
+    } else {
+      setPassLength(false);
+    }
+  }, [password]);
 
+  
     const loginUser = () => {};
 
   return (
