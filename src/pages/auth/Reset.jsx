@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
+import { MdPassword } from 'react-icons/md';  
 import { Link } from 'react-router-dom';
 import Card from '../../components/card/Card';
 import PasswordInput from '../../components/passwordInput/PasswordInput';
 import styles from "./auth.module.scss"
 
-const Forgot = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("")
+const initialState = {
+    password: "",
+    password2: "",
+  };
+
+
+const Reset = () => {
+    const [formData, setformData] = useState(initialState);
+  const { password, password2 } = formData;
+//   const { resetToken } = useParams();
 
     const handleInputChange = () => {};
 
@@ -18,21 +25,25 @@ const Forgot = () => {
         <Card>
         <div className={styles.form}>
             <div className="--flex-center">
-                <AiOutlineMail size={35} color="#999" />
+                <MdPassword size={35} color="#999" />
             </div>
-            <h2>Forgot Password</h2>            
+            <h2>Reset Password</h2>            
             <form onSubmit={loginUser}>
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              name="email"
-              value={email}
-              onChange={handleInputChange}
-              />
-              <small style={{color: 'red', fontSize:'13px'}}>Enter email associated with your account.</small>
+            <PasswordInput 
+            placeholder="Password"
+            name="password"
+            value={password}
+            onChange={handleInputChange}
+            />
+
+            <PasswordInput 
+            placeholder="Confirm Password"
+            name="password2"
+            value={password2}
+            onChange={handleInputChange}
+            />
             <button type="submit" className="--btn --btn-primary --btn-block">
-              Get Reset Email
+              Reset password
             </button>
             <div className={styles.links}>
                 <p>
@@ -49,4 +60,4 @@ const Forgot = () => {
   )
 }
 
-export default Forgot
+export default Reset
