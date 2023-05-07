@@ -9,8 +9,11 @@ import Register from './pages/auth/Register';
 import Reset from './pages/auth/Reset';
 import Verify from './pages/auth/Verify';
 import Home from './pages/home/Home';
-// import Profile from './pages/profile/Profile.Jsx';
+import Profile from './pages/profile/Profile';
+
+
 // import Auth from './pages/auth/Auth';
+
 function App() {
   return (
    <>
@@ -27,11 +30,11 @@ function App() {
      <Route path="/resetPassword/:resetToken" element={<Reset />} /> 
      <Route path="/LoginWithCode/:email" element={<LoginWithCode />} /> 
      <Route path="/verify" element={<Verify />} /> 
-     {/* <Route path="/profile" element={ 
+     <Route path="/profile" element={ 
      <Layout>
         <Profile />
      </Layout> 
-    } />  */}
+    } /> 
    </Routes>
    </BrowserRouter>
    </>
