@@ -10,7 +10,7 @@ const initialState = {
   bio: " ",
   photo: " ",
   role: " ",
-  isVerified: " ",
+  isVerified: false,
 };
 
 const Profile = () => {
@@ -18,6 +18,9 @@ const Profile = () => {
   const [profile, setProfile] = useState(initialState);
   
   const handleImageChange = () => {};
+
+  const handleInputChange = () => {}; 
+
   return (
     <>
       <div className="container">
@@ -47,8 +50,42 @@ const Profile = () => {
                 type="text"
                 name="name"
                 value={profile.name}
-                onChange={''}
+                onChange={handleInputChange}
               />
+            </p>
+            <p>
+              <label>Email:</label>
+                <input
+                type="email"
+                name="email"
+                value={profile.email}
+                onChange={handleInputChange}
+                disabled
+              />
+            </p>
+            <p>
+              <label>Phone:</label>
+                <input
+                type="text"
+                name="phone"
+                value={profile.phone}
+                onChange={handleInputChange}
+              />
+            </p>
+            <p>
+            <label>Bio:</label>
+              <textarea
+              name="bio"
+              value={profile?.bio}
+              onChange={handleInputChange}
+              cols="30"
+              rows="10"
+              ></textarea>
+            </p>
+            <p>
+              <button className="--btn --btn-primary --btn-block">
+                Update Profile
+              </button>
             </p>
 
             </form>
