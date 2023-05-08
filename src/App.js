@@ -29,7 +29,7 @@ function App() {
      <Route path="/forgot" element={<Forgot />} /> 
      <Route path="/resetPassword/:resetToken" element={<Reset />} /> 
      <Route path="/LoginWithCode/:email" element={<LoginWithCode />} /> 
-     <Route path="/verify" element={<Verify />} /> 
+     <Route path="/verify/:verificationToken" element={<Verify />} /> 
      <Route path="/profile" element={ 
      <Layout>
         <Profile />
