@@ -3,6 +3,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 import PageMenu from '../../components/pageMenu/PageMenu';
 import UserStats from '../../components/userStart/UserStats';
 import Search from './search/Search';
+import ChangeRole from '../../components/changeRole/ChangeRole'
 import './UserList.scss'
 
 const UserList = () => {
@@ -39,7 +40,7 @@ const UserList = () => {
                                 <td>Justina</td>
                                 <td>tina@gmail.com</td>
                                 <td>Admin</td>
-                                <td>"ChangeRole"</td>
+                                <td><ChangeRole /></td>
                                 <td>
                                     <span>
                                         <FaTrashAlt size={20}
