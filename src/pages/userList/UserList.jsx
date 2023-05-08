@@ -1,5 +1,6 @@
 import React from 'react';
 import PageMenu from '../../components/pageMenu/PageMenu';
+import UserStats from '../../components/userStart/UserStats';
 import './UserList.scss'
 
 const UserList = () => {
@@ -7,7 +8,8 @@ const UserList = () => {
     <section>
         <div className="container">
         <PageMenu />
-
+        <UserStats />
+        
         </div>
 
     </section>
