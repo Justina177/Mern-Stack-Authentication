@@ -24,7 +24,7 @@ const UserStats = () => {
         bgColor="card1"
         />
         <InfoBox
-        icon={icon1}
+        icon={icon2}
         title={"Verified Users"}
         count={"6"}
         bgColor="card2"
