@@ -23,14 +23,14 @@ const ChangePassword = () => {
       <div className="container">
         <PageMenu />
         <h2>Change Password</h2>
-        <div className="--flex-start profile">
+        <div className="--flex-start  change-password">
         <Card cardClass={"card"}>
           <div>
             <form> 
             <p>
                 <label> Current password</label>
                 <PasswordInput 
-                        placeholder="Old Password"
+                        placeholder="Current Password"
                         name="oldPassword"
                         value={oldPassword}
                         onChange={handleInputChange}
@@ -39,7 +39,7 @@ const ChangePassword = () => {
             <p>
                 <label>New Password</label>
                 <PasswordInput
-                    placeholder="Password"
+                    placeholder="New Password"
                     name="password"
                     value={password}
                     onChange={handleInputChange}
@@ -48,7 +48,7 @@ const ChangePassword = () => {
             <p>
                 <label>Confirm New Password</label>
                 <PasswordInput 
-                    placeholder="Confirm Password"
+                    placeholder="Confirm New Password"
                     name="password2"
                     value={password2}
                     onChange={handleInputChange}

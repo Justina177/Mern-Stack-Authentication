@@ -11,6 +11,7 @@ import Verify from './pages/auth/Verify';
 import ChangePassword from './pages/changePassword/ChangePassword';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
+import UserList from './pages/userList/UserList';
 
 
 // import Auth from './pages/auth/Auth';
@@ -41,7 +42,13 @@ function App() {
         <ChangePassword />
      </Layout> 
     } /> 
+    <Route path="/users" element={ 
+     <Layout>
+        <UserList />
+     </Layout> 
+    } /> 
    </Routes>
+   
    </BrowserRouter>
    </>
   );
