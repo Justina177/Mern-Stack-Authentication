@@ -1,6 +1,7 @@
 import React from 'react';
 import PageMenu from '../../components/pageMenu/PageMenu';
 import UserStats from '../../components/userStart/UserStats';
+import Search from './search/Search';
 import './UserList.scss'
 
 const UserList = () => {
@@ -14,6 +15,9 @@ const UserList = () => {
             <div className="--flex-between">
             <span>
                 <h3>All Users</h3>
+            </span>
+            <span>
+                <Search />
             </span>
 
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiSearch } from 'react-icons/bi';
-import './Search.module.scss';
+import styles from './Search.module.scss';
 
 const Search = ({ value, onChange }) => {
   return (
